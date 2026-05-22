@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Register | LearnSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="LearnSphere home">
+                <span class="brand-mark">LS</span>
+                <span class="brand-text">LearnSphere</span>
+            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb"></span>
+                    </span>
+                    <span class="theme-label">Light</span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="courses.html">Course Listings</a></li>
+                <li><a href="index.html#videos">Video Section</a></li>
+                <li><a href="index.html#instructors">Instructor Profiles</a></li>
+                <li><a class="nav-button" href="login.html">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="login-page">
+        <section class="account-hero">
+            <p class="eyebrow">Account Access</p>
+            <h1>Login or create your LearnSphere account</h1>
+            <p>Use one page to continue an existing course or register as a new learner.</p>
+        </section>
+
+        <section class="account-grid" aria-label="Login and registration forms">
+            <article class="login-card" aria-labelledby="login-title">
+                <p class="eyebrow">Login Details</p>
+                <h2 id="login-title">Welcome back</h2>
+                <form>
+                    <label for="login-email">Email address</label>
+                    <input id="login-email" name="login-email" type="email" placeholder="student@example.com" required>
+
+                    <label for="login-password">Password</label>
+                    <input id="login-password" name="login-password" type="password" placeholder="Enter your password" required>
+
+                    <button class="primary-button" type="submit">Login Now</button>
+                </form>
+            </article>
+
+            <article class="login-card register-card" aria-labelledby="register-title">
+                <p class="eyebrow">Register Details</p>
+                <h2 id="register-title">Create account</h2>
+                <form>
+                    <label for="register-name">Full name</label>
+                    <input id="register-name" name="register-name" type="text" placeholder="Enter your full name" required>
+
+                    <label for="register-email">Email address</label>
+                    <input id="register-email" name="register-email" type="email" placeholder="you@example.com" required>
+
+                    <label for="register-password">Create password</label>
+                    <input id="register-password" name="register-password" type="password" placeholder="Create a strong password" required>
+
+                    <label for="register-course">Interested course</label>
+                    <select id="register-course" name="register-course" required>
+                        <option value="">Select a course</option>
+                        <option value="frontend">Frontend Foundations</option>
+                        <option value="python">Python for Beginners</option>
+                        <option value="design">UI Design Essentials</option>
+                    </select>
+
+                    <button class="primary-button" type="submit">Register Now</button>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="brand footer-brand" href="index.html" aria-label="LearnSphere home">
+                    <span class="brand-mark">LS</span>
+                    <span class="brand-text">LearnSphere</span>
+                </a>
+                <p>Practical courses, guided videos, and expert mentors for career-ready learning.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <a href="courses.html">Courses</a>
+                <a href="index.html#videos">Video Lessons</a>
+                <a href="index.html#instructors">Instructors</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: support@learnsphere.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Hours: Mon-Fri, 9 AM-6 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LearnSphere. All rights reserved.</p>
+            <p>Learn better. Build faster. Grow confidently.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

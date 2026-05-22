@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnSphere | Online Learning Platform</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="LearnSphere home">
+                <span class="brand-mark">LS</span>
+                <span class="brand-text">LearnSphere</span>
+            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb"></span>
+                    </span>
+                    <span class="theme-label">Light</span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="courses.html">Course Listings</a></li>
+                <li><a href="#videos">Video Section</a></li>
+                <li><a href="#instructors">Instructor Profiles</a></li>
+                <li><a class="nav-button" href="login.html">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Online learning made practical</p>
+                <h1>Build real skills with expert-led courses.</h1>
+                <p class="hero-copy">Explore focused courses, watch structured lessons, and learn from instructors with hands-on industry experience.</p>
+                <div class="hero-actions">
+                    <a class="primary-button" href="courses.html">Browse Courses</a>
+                    <a class="secondary-button" href="#videos">Watch Preview</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="courses">
+            <div class="section-heading">
+                <p class="eyebrow">Course Listings</p>
+                <h2>Popular learning paths</h2>
+            </div>
+            <div class="card-grid">
+                <article class="course-card">
+                    <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Web development code on a laptop">
+                    <span class="course-tag">Web Development</span>
+                    <h3>Frontend Foundations</h3>
+                    <p>HTML, CSS, JavaScript, responsive design, and project-based UI practice.</p>
+                    <a href="courses.html">View course</a>
+                </article>
+                <article class="course-card">
+                    <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Python programming on a laptop">
+                    <span class="course-tag">Data Skills</span>
+                    <h3>Python for Beginners</h3>
+                    <p>Start programming with Python through clean examples and simple exercises.</p>
+                    <a href="courses.html">View course</a>
+                </article>
+                <article class="course-card">
+                    <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900" alt="UI design sketches and wireframes">
+                    <span class="course-tag">Design</span>
+                    <h3>UI Design Essentials</h3>
+                    <p>Learn layout, color, typography, and usability for modern digital products.</p>
+                    <a href="courses.html">View course</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="section video-section" id="videos">
+            <div class="section-heading">
+                <p class="eyebrow">Video Section</p>
+                <h2>Preview a lesson</h2>
+            </div>
+            <div class="video-panel">
+                <div class="video-placeholder" aria-label="Course video preview">
+                    <div class="play-button" aria-hidden="true"></div>
+                </div>
+                <div>
+                    <h3>Introduction to structured online learning</h3>
+                    <p>Get a quick look at how lessons, practice tasks, and instructor guidance work together on LearnSphere.</p>
+                    <a class="secondary-button" href="courses.html">See all lessons</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="instructors">
+            <div class="section-heading">
+                <p class="eyebrow">Instructor Profiles</p>
+                <h2>Learn with experienced mentors</h2>
+            </div>
+            <div class="instructor-grid">
+                <article class="instructor-card">
+                    <img class="instructor-photo" src="https://images.pexels.com/photos/36781271/pexels-photo-36781271.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Aarav Mehta">
+                    <h3>Aarav Mehta</h3>
+                    <p>Full-stack developer specializing in practical web projects.</p>
+                </article>
+                <article class="instructor-card">
+                    <img class="instructor-photo" src="https://images.pexels.com/photos/6929207/pexels-photo-6929207.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Sara Rao">
+                    <h3>Sara Rao</h3>
+                    <p>Product designer focused on accessible, user-friendly interfaces.</p>
+                </article>
+                <article class="instructor-card">
+                    <img class="instructor-photo" src="https://images.pexels.com/photos/7647990/pexels-photo-7647990.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Neha Kapoor">
+                    <h3>Neha Kapoor</h3>
+                    <p>Data analyst teaching Python, dashboards, and business insights.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="login-preview" id="login">
+            <div>
+                <p class="eyebrow">Account Access</p>
+                <h2>Login or register to continue learning.</h2>
+                <p>Access saved courses, lesson progress, certificates, and create a new student account in one place.</p>
+            </div>
+            <a class="primary-button" href="login.html">Login / Register</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="brand footer-brand" href="index.html" aria-label="LearnSphere home">
+                    <span class="brand-mark">LS</span>
+                    <span class="brand-text">LearnSphere</span>
+                </a>
+                <p>Practical courses, guided videos, and expert mentors for career-ready learning.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <a href="courses.html">Courses</a>
+                <a href="#videos">Video Lessons</a>
+                <a href="#instructors">Instructors</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: support@learnsphere.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Hours: Mon-Fri, 9 AM-6 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LearnSphere. All rights reserved.</p>
+            <p>Learn better. Build faster. Grow confidently.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
