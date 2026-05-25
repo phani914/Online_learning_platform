@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Foundations | LearnSphere</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a class="brand" href="index.html" aria-label="LearnSphere home">
+                <span class="brand-mark">LS</span>
+                <span class="brand-text">LearnSphere</span>
+            </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+                    <span class="toggle-track">
+                        <span class="toggle-thumb"></span>
+                    </span>
+                    <span class="theme-label">Light</span>
+                </button>
+                <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="courses.html">Course Listings</a></li>
+                <li><a href="index.html#videos">Video Section</a></li>
+                <li><a href="index.html#instructors">Instructor Profiles</a></li>
+                <li><a class="nav-button" href="login.html">Login / Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-detail-hero">
+            <div class="course-detail-content">
+                <div>
+                    <a class="back-link" href="courses.html">Back to courses</a>
+                    <p class="eyebrow">Web Development</p>
+                    <h1>Frontend Foundations</h1>
+                    <p class="course-lead">Build polished, responsive websites with HTML, CSS, JavaScript, accessibility basics, and real project practice.</p>
+                    <div class="course-meta" aria-label="Course facts">
+                        <span>Beginner friendly</span>
+                        <span>8 weeks</span>
+                        <span>36 lessons</span>
+                        <span>Certificate included</span>
+                    </div>
+                    <div class="hero-actions">
+                        <a class="primary-button" href="login.html">Enroll Now</a>
+                        <a class="secondary-button" href="#curriculum">View Curriculum</a>
+                    </div>
+                </div>
+                <aside class="course-summary-card" aria-label="Course enrollment summary">
+                    <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Web development code on a laptop">
+                    <div class="summary-price">
+                        <span>Course fee</span>
+                        <strong>₹4,999</strong>
+                    </div>
+                    <ul>
+                        <li>Live mentor support every week</li>
+                        <li>Downloadable practice files</li>
+                        <li>Portfolio-ready final project</li>
+                        <li>Lifetime access to recordings</li>
+                    </ul>
+                </aside>
+            </div>
+        </section>
+
+        <section class="course-detail-section">
+            <div class="detail-grid">
+                <article class="detail-panel">
+                    <p class="eyebrow">What You Will Learn</p>
+                    <h2>Practical skills for modern web pages</h2>
+                    <div class="outcome-grid">
+                        <div>
+                            <h3>Responsive Layouts</h3>
+                            <p>Create flexible pages with grids, cards, forms, and mobile-first structure.</p>
+                        </div>
+                        <div>
+                            <h3>Clean CSS Systems</h3>
+                            <p>Use reusable spacing, color, typography, and component patterns confidently.</p>
+                        </div>
+                        <div>
+                            <h3>JavaScript Basics</h3>
+                            <p>Add menus, theme toggles, validation touches, and lightweight interactions.</p>
+                        </div>
+                        <div>
+                            <h3>Project Delivery</h3>
+                            <p>Plan, build, test, and present a complete landing page and course site.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="mentor-card">
+                    <img src="https://images.pexels.com/photos/36781271/pexels-photo-36781271.jpeg?auto=compress&cs=tinysrgb&w=700" alt="Aarav Mehta">
+                    <p class="eyebrow">Instructor</p>
+                    <h2>Aarav Mehta</h2>
+                    <p>Full-stack developer and mentor focused on clear explanations, useful projects, and job-ready frontend habits.</p>
+                </aside>
+            </div>
+        </section>
+
+        <section class="course-detail-section curriculum-section" id="curriculum">
+            <div class="section-heading">
+                <p class="eyebrow">Curriculum</p>
+                <h2>Course modules</h2>
+            </div>
+            <div class="module-list">
+                <article>
+                    <span>01</span>
+                    <div>
+                        <h3>HTML structure and semantic pages</h3>
+                        <p>Headings, sections, links, images, forms, and accessible document structure.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>02</span>
+                    <div>
+                        <h3>CSS layout and visual design</h3>
+                        <p>Box model, flexbox, grid, responsive spacing, colors, and reusable card systems.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>03</span>
+                    <div>
+                        <h3>JavaScript for interface behavior</h3>
+                        <p>DOM selection, events, menus, toggles, and simple page state.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>04</span>
+                    <div>
+                        <h3>Final portfolio project</h3>
+                        <p>Build and polish a responsive learning platform page with review feedback.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="course-cta">
+            <div>
+                <p class="eyebrow">Ready To Start?</p>
+                <h2>Join Frontend Foundations today.</h2>
+                <p>Enroll to access lessons, practice tasks, mentor feedback, and your final certificate.</p>
+            </div>
+            <a class="primary-button" href="login.html">Enroll Now</a>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <a class="brand footer-brand" href="index.html" aria-label="LearnSphere home">
+                    <span class="brand-mark">LS</span>
+                    <span class="brand-text">LearnSphere</span>
+                </a>
+                <p>Practical courses, guided videos, and expert mentors for career-ready learning.</p>
+            </div>
+            <div>
+                <h3>Explore</h3>
+                <a href="courses.html">Courses</a>
+                <a href="index.html#videos">Video Lessons</a>
+                <a href="index.html#instructors">Instructors</a>
+            </div>
+            <div>
+                <h3>Contact</h3>
+                <p>Email: support@learnsphere.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>Hours: Mon-Fri, 9 AM-6 PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 LearnSphere. All rights reserved.</p>
+            <p>Learn better. Build faster. Grow confidently.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

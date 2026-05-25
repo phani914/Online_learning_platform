@@ -36,51 +36,96 @@
     </header>
 
     <main class="login-page">
-        <section class="account-hero">
-            <p class="eyebrow">Account Access</p>
-            <h1>Login or create your LearnSphere account</h1>
-            <p>Use one page to continue an existing course or register as a new learner.</p>
-        </section>
+        <section class="account-shell" aria-label="Login and registration forms">
+            <div class="account-showcase">
+                <div class="showcase-content">
+                    <p class="eyebrow">Account Access</p>
+                    <h1>Pick up your learning right where you left off.</h1>
+                    <p>Track lessons, save courses, join mentor sessions, and keep your progress moving across every device.</p>
+                </div>
+                <div class="showcase-panel" aria-label="Learner progress summary">
+                    <div>
+                        <span>Weekly progress</span>
+                        <strong>82%</strong>
+                    </div>
+                    <div class="progress-track">
+                        <span></span>
+                    </div>
+                    <p>Next lesson: Responsive layouts in CSS</p>
+                </div>
+                <div class="showcase-stats" aria-label="Platform highlights">
+                    <span>24 courses</span>
+                    <span>15 mentors</span>
+                    <span>8 certificates</span>
+                </div>
+            </div>
 
-        <section class="account-grid" aria-label="Login and registration forms">
-            <article class="login-card" aria-labelledby="login-title">
-                <p class="eyebrow">Login Details</p>
-                <h2 id="login-title">Welcome back</h2>
-                <form>
-                    <label for="login-email">Email address</label>
-                    <input id="login-email" name="login-email" type="email" placeholder="student@example.com" required>
+            <div class="account-forms">
+                <article class="login-card" aria-labelledby="login-title">
+                    <div class="form-heading">
+                        <p class="eyebrow">Login Details</p>
+                        <h2 id="login-title">Welcome back</h2>
+                        <p>Sign in to continue your saved courses and lesson progress.</p>
+                    </div>
+                    <form>
+                        <div class="field-group">
+                            <label for="login-email">Email address</label>
+                            <input id="login-email" name="login-email" type="email" placeholder="student@example.com" autocomplete="email" required>
+                        </div>
 
-                    <label for="login-password">Password</label>
-                    <input id="login-password" name="login-password" type="password" placeholder="Enter your password" required>
+                        <div class="field-group">
+                            <label for="login-password">Password</label>
+                            <input id="login-password" name="login-password" type="password" placeholder="Enter your password" autocomplete="current-password" required>
+                        </div>
 
-                    <button class="primary-button" type="submit">Login Now</button>
-                </form>
-            </article>
+                        <div class="form-row">
+                            <label class="check-option" for="remember-me">
+                                <input id="remember-me" name="remember-me" type="checkbox">
+                                <span>Remember me</span>
+                            </label>
+                            <a href="#">Forgot password?</a>
+                        </div>
 
-            <article class="login-card register-card" aria-labelledby="register-title">
-                <p class="eyebrow">Register Details</p>
-                <h2 id="register-title">Create account</h2>
-                <form>
-                    <label for="register-name">Full name</label>
-                    <input id="register-name" name="register-name" type="text" placeholder="Enter your full name" required>
+                        <button class="primary-button" type="submit">Login Now</button>
+                    </form>
+                </article>
 
-                    <label for="register-email">Email address</label>
-                    <input id="register-email" name="register-email" type="email" placeholder="you@example.com" required>
+                <article class="login-card register-card" aria-labelledby="register-title">
+                    <div class="form-heading">
+                        <p class="eyebrow">Register Details</p>
+                        <h2 id="register-title">Create account</h2>
+                        <p>Start with a course path and personalize your dashboard.</p>
+                    </div>
+                    <form>
+                        <div class="field-group">
+                            <label for="register-name">Full name</label>
+                            <input id="register-name" name="register-name" type="text" placeholder="Enter your full name" autocomplete="name" required>
+                        </div>
 
-                    <label for="register-password">Create password</label>
-                    <input id="register-password" name="register-password" type="password" placeholder="Create a strong password" required>
+                        <div class="field-group">
+                            <label for="register-email">Email address</label>
+                            <input id="register-email" name="register-email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                        </div>
 
-                    <label for="register-course">Interested course</label>
-                    <select id="register-course" name="register-course" required>
-                        <option value="">Select a course</option>
-                        <option value="frontend">Frontend Foundations</option>
-                        <option value="python">Python for Beginners</option>
-                        <option value="design">UI Design Essentials</option>
-                    </select>
+                        <div class="field-group">
+                            <label for="register-password">Create password</label>
+                            <input id="register-password" name="register-password" type="password" placeholder="Create a strong password" autocomplete="new-password" required>
+                        </div>
 
-                    <button class="primary-button" type="submit">Register Now</button>
-                </form>
-            </article>
+                        <div class="field-group">
+                            <label for="register-course">Interested course</label>
+                            <select id="register-course" name="register-course" required>
+                                <option value="">Select a course</option>
+                                <option value="frontend">Frontend Foundations</option>
+                                <option value="python">Python for Beginners</option>
+                                <option value="design">UI Design Essentials</option>
+                            </select>
+                        </div>
+
+                        <button class="primary-button" type="submit">Register Now</button>
+                    </form>
+                </article>
+            </div>
         </section>
     </main>
 

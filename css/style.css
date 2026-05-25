@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
 :root {
     --text: #102033;
     --muted: #596579;
@@ -47,6 +53,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     background: var(--body-bg);
     line-height: 1.6;
+    overflow-x: hidden;
     transition: background 0.25s ease, color 0.25s ease;
 }
 
@@ -142,6 +149,7 @@ a {
     padding: 0 18px;
     border-radius: 6px;
     font-weight: 800;
+    text-align: center;
 }
 
 .nav-button,
@@ -315,13 +323,14 @@ body.dark-mode .section:nth-of-type(odd) {
 .card-grid,
 .instructor-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 20px;
 }
 
 .course-card,
 .instructor-card,
 .login-card {
+    min-width: 0;
     padding: 24px;
     border: 1px solid var(--line);
     border-radius: 8px;
@@ -441,6 +450,7 @@ body.dark-mode .video-section {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
     gap: 24px;
     margin-bottom: 72px;
     padding: 34px 24px;
@@ -498,6 +508,7 @@ body.dark-mode .video-section {
 
 .footer-bottom {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 18px;
     max-width: 1120px;
@@ -512,59 +523,409 @@ body.dark-mode .video-section {
     min-height: calc(100vh - 72px);
 }
 
-.login-page {
-    display: grid;
-    align-content: center;
-    gap: 28px;
-    min-height: calc(100vh - 72px);
-    padding: 48px 24px;
+.course-detail-hero {
+    padding: 58px 24px;
+    color: #ffffff;
+    background:
+        linear-gradient(120deg, rgba(6, 35, 54, 0.94), rgba(15, 118, 110, 0.74), rgba(37, 99, 235, 0.52)),
+        url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80") center/cover;
 }
 
-.account-hero,
-.account-grid {
-    width: min(100%, 980px);
+.course-detail-content,
+.course-detail-section,
+.course-cta {
+    max-width: 1120px;
     margin: 0 auto;
 }
 
-.account-hero {
-    text-align: center;
+.course-detail-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+    gap: 34px;
+    align-items: center;
+    min-height: 560px;
 }
 
-.account-hero h1 {
+.back-link {
+    display: inline-flex;
+    margin-bottom: 26px;
+    color: #dbeafe;
+    font-weight: 800;
+}
+
+.course-detail-hero .eyebrow {
+    color: #99f6e4;
+}
+
+.course-detail-hero h1 {
+    max-width: 720px;
     margin: 0;
-    font-size: 2.2rem;
-    line-height: 1.15;
+    font-size: clamp(2.4rem, 6vw, 4.6rem);
+    line-height: 1.02;
 }
 
-.account-hero p:last-child {
-    max-width: 620px;
-    margin: 14px auto 0;
+.course-lead {
+    max-width: 660px;
+    margin: 20px 0 0;
+    color: #e5edf4;
+    font-size: 1.12rem;
+}
+
+.course-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.course-meta span {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.3);
+    color: #f8fafc;
+    font-weight: 800;
+    font-size: 0.9rem;
+}
+
+.course-summary-card,
+.detail-panel,
+.mentor-card,
+.module-list article,
+.course-cta {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.course-summary-card {
+    overflow: hidden;
+    color: var(--text);
+}
+
+.course-summary-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+.summary-price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding: 20px 22px 8px;
+}
+
+.summary-price span {
+    color: var(--muted);
+    font-weight: 800;
+}
+
+.summary-price strong {
+    color: var(--brand-dark);
+    font-size: 2rem;
+}
+
+.course-summary-card ul {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 12px 22px 24px;
     color: var(--muted);
 }
 
-.account-grid {
+.course-summary-card li {
+    margin-left: 18px;
+}
+
+.course-detail-section {
+    padding: 72px 24px 0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.65fr);
+    gap: 24px;
+    align-items: start;
+}
+
+.detail-panel,
+.mentor-card {
+    padding: 28px;
+}
+
+.detail-panel h2,
+.mentor-card h2,
+.course-cta h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.outcome-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 22px;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.outcome-grid div {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface-strong);
+}
+
+.outcome-grid h3,
+.module-list h3 {
+    margin: 0 0 8px;
+}
+
+.outcome-grid p,
+.mentor-card p,
+.module-list p,
+.course-cta p {
+    color: var(--muted);
+}
+
+.mentor-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.curriculum-section {
+    padding-top: 64px;
+}
+
+.module-list {
+    display: grid;
+    gap: 14px;
+}
+
+.module-list article {
+    display: grid;
+    grid-template-columns: 58px minmax(0, 1fr);
+    gap: 18px;
+    padding: 22px;
+}
+
+.module-list span {
+    display: inline-grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    border-radius: 8px;
+    color: #ffffff;
+    background: linear-gradient(135deg, var(--brand), var(--accent));
+    font-weight: 900;
+}
+
+.module-list p {
+    margin: 0;
+}
+
+.course-cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 72px;
+    margin-bottom: 72px;
+    padding: 32px;
+}
+
+.course-cta p {
+    margin-bottom: 0;
+}
+
+.login-page {
+    display: grid;
+    align-content: center;
+    min-height: calc(100vh - 72px);
+    padding: 58px 24px;
+}
+
+.account-shell {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+    width: min(100%, 1120px);
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.account-showcase {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 760px;
+    padding: 38px;
+    color: #ffffff;
+    background:
+        linear-gradient(150deg, rgba(6, 35, 54, 0.92), rgba(15, 118, 110, 0.68), rgba(37, 99, 235, 0.46)),
+        url("https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1200&q=80") center/cover;
+}
+
+.account-showcase::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, rgba(2, 6, 23, 0.52), transparent 54%);
+    pointer-events: none;
+}
+
+.showcase-content,
+.showcase-panel,
+.showcase-stats {
+    position: relative;
+    z-index: 1;
+}
+
+.showcase-content .eyebrow {
+    color: #99f6e4;
+}
+
+.showcase-content h1 {
+    max-width: 470px;
+    margin: 0;
+    font-size: 2.65rem;
+    line-height: 1.05;
+}
+
+.showcase-content p:last-child {
+    max-width: 440px;
+    margin: 18px 0 0;
+    color: #dbeafe;
+}
+
+.showcase-panel {
+    margin-top: auto;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.13);
+    backdrop-filter: blur(14px);
+}
+
+.showcase-panel div:first-child,
+.showcase-stats {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.showcase-panel span,
+.showcase-stats span {
+    color: #dbeafe;
+    font-weight: 800;
+}
+
+.showcase-panel strong {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.progress-track {
+    height: 9px;
+    margin: 16px 0 12px;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.24);
+}
+
+.progress-track span {
+    display: block;
+    width: 82%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #5eead4, #fbbf24);
+}
+
+.showcase-panel p {
+    margin: 0;
+    color: #f8fafc;
+}
+
+.showcase-stats {
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.showcase-stats span {
+    display: inline-flex;
+    min-height: 38px;
+    align-items: center;
+    padding: 0 12px;
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.28);
+    font-size: 0.88rem;
+}
+
+.account-forms {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0;
+    align-content: start;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.68), rgba(236, 254, 255, 0.42));
+}
+
+body.dark-mode .account-forms {
+    background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.58), rgba(8, 47, 73, 0.22));
 }
 
 .login-card {
     width: 100%;
-    border-top: 4px solid var(--brand);
+    min-width: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
-.register-card {
-    border-top-color: var(--accent);
+.login-card + .login-card {
+    border-left: 1px solid var(--line);
+}
+
+.form-heading {
+    margin-bottom: 24px;
 }
 
 .login-card h1,
 .login-card h2 {
-    margin: 0 0 22px;
+    margin: 0;
+}
+
+.form-heading p:last-child {
+    margin: 8px 0 0;
+    color: var(--muted);
 }
 
 .login-card form {
     display: grid;
-    gap: 12px;
+    gap: 16px;
+}
+
+.field-group {
+    display: grid;
+    gap: 7px;
 }
 
 .login-card label {
@@ -574,21 +935,63 @@ body.dark-mode .video-section {
 .login-card input,
 .login-card select {
     width: 100%;
-    min-height: 46px;
+    min-height: 48px;
     padding: 0 14px;
     border: 1px solid var(--line);
     border-radius: 6px;
     color: var(--text);
     background: var(--surface-strong);
     font: inherit;
+    outline: 0;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.login-card input:focus,
+.login-card select:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.12);
 }
 
 .login-card select {
     cursor: pointer;
 }
 
+.form-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    color: var(--muted);
+    font-size: 0.92rem;
+}
+
+.form-row a {
+    color: var(--brand);
+    font-weight: 800;
+}
+
+.check-option {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.check-option input {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+    min-height: 18px;
+    padding: 0;
+    accent-color: var(--brand);
+}
+
+.login-card .primary-button {
+    width: 100%;
+}
+
 .login-card button {
-    margin-top: 12px;
+    margin-top: 6px;
     cursor: pointer;
 }
 
@@ -607,13 +1010,25 @@ body.dark-mode .video-section {
         padding: 72px 24px;
     }
 
-    .card-grid,
-    .instructor-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
     .video-panel {
         grid-template-columns: 1fr;
+    }
+
+    .course-detail-content,
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .course-detail-content {
+        min-height: auto;
+    }
+
+    .course-summary-card {
+        max-width: 620px;
+    }
+
+    .course-cta .primary-button {
+        width: auto;
     }
 
     .video-placeholder {
@@ -624,13 +1039,26 @@ body.dark-mode .video-section {
         grid-template-columns: 1fr 1fr;
     }
 
-    .account-grid {
+    .account-shell {
         grid-template-columns: 1fr;
-        max-width: 640px;
+        max-width: 720px;
+    }
+
+    .account-showcase {
+        min-height: 430px;
+    }
+
+    .account-forms {
+        grid-template-columns: 1fr;
+    }
+
+    .login-card + .login-card {
+        border-top: 1px solid var(--line);
+        border-left: 0;
     }
 }
 
-@media (max-width: 760px) {
+@media (max-width: 900px) {
     .navbar {
         min-height: 68px;
         padding: 0 16px;
@@ -699,6 +1127,9 @@ body.dark-mode .video-section {
         width: 100%;
         margin-top: 10px;
     }
+}
+
+@media (max-width: 760px) {
 
     .hero {
         min-height: 500px;
@@ -728,20 +1159,78 @@ body.dark-mode .video-section {
         padding: 54px 18px;
     }
 
-    .card-grid,
-    .instructor-grid,
-    .video-panel {
+    .page-shell {
+        width: 100%;
+    }
+
+    .course-detail-hero {
+        padding: 40px 18px;
+    }
+
+    .course-detail-content {
+        gap: 26px;
+    }
+
+    .course-detail-section {
+        padding: 54px 18px 0;
+    }
+
+    .course-meta {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .course-meta span {
+        justify-content: center;
+    }
+
+    .outcome-grid {
         grid-template-columns: 1fr;
     }
 
+    .detail-panel,
+    .mentor-card,
+    .module-list article,
+    .course-cta {
+        padding: 20px;
+    }
+
+    .module-list article {
+        grid-template-columns: 1fr;
+    }
+
+    .course-cta {
+        align-items: stretch;
+        flex-direction: column;
+        margin: 54px 18px;
+    }
+
     .course-card,
-    .instructor-card,
-    .login-card {
+    .instructor-card {
         padding: 18px;
     }
 
-    .account-hero h1 {
-        font-size: 1.9rem;
+    .login-page {
+        padding: 28px 16px;
+    }
+
+    .account-showcase {
+        min-height: 380px;
+        padding: 26px;
+    }
+
+    .showcase-content h1 {
+        font-size: 2rem;
+    }
+
+    .login-card {
+        padding: 22px 18px;
+    }
+
+    .form-row {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
     }
 
     .video-placeholder {
@@ -773,8 +1262,39 @@ body.dark-mode .video-section {
         font-size: 2rem;
     }
 
+    .hero {
+        min-height: 430px;
+        padding: 44px 16px;
+    }
+
     .section-heading h1,
     .section-heading h2 {
         font-size: 1.55rem;
+    }
+
+    .course-detail-hero h1,
+    .showcase-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .summary-price {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .account-showcase {
+        min-height: 330px;
+        padding: 22px;
+    }
+
+    .showcase-panel div:first-child,
+    .showcase-stats {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .login-card {
+        padding: 20px 16px;
     }
 }
