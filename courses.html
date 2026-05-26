@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
             <a class="brand" href="index.html" aria-label="LearnSphere home">
@@ -27,7 +28,7 @@
                 </button>
             </div>
             <ul class="nav-links">
-                <li><a href="courses.html">Course Listings</a></li>
+                <li><a href="courses.html" aria-current="page">Course Listings</a></li>
                 <li><a href="index.html#videos">Video Section</a></li>
                 <li><a href="index.html#instructors">Instructor Profiles</a></li>
                 <li><a class="nav-button" href="login.html">Login / Register</a></li>
@@ -35,7 +36,7 @@
         </nav>
     </header>
 
-    <main class="page-shell">
+    <main class="page-shell" id="main-content">
         <section class="section">
             <div class="section-heading">
                 <p class="eyebrow">Course Listings</p>
@@ -46,21 +47,96 @@
                     <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Web development code on a laptop">
                     <span class="course-tag">Web Development</span>
                     <h3>Frontend Foundations</h3>
-                    <p>Build responsive web pages with HTML, CSS, and JavaScript.</p>
+                    <p>Build responsive web pages with HTML, CSS, JavaScript, accessibility, reusable components, and deployment-ready project structure.</p>
+                    <div class="course-info" aria-label="Frontend Foundations details">
+                        <span>8 weeks</span>
+                        <span>36 lessons</span>
+                        <span>Certificate</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Best for first-time web developers and students building a portfolio.</li>
+                        <li>Includes landing pages, forms, navigation, dark mode, and final review.</li>
+                    </ul>
                     <a href="course-details.html">View details</a>
                 </article>
                 <article class="course-card">
                     <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Python programming on a laptop">
                     <span class="course-tag">Programming</span>
                     <h3>Python for Beginners</h3>
-                    <p>Understand programming basics through friendly Python lessons.</p>
+                    <p>Understand programming basics through friendly Python lessons, guided exercises, debugging habits, and small real-world scripts.</p>
+                    <div class="course-info" aria-label="Python for Beginners details">
+                        <span>6 weeks</span>
+                        <span>30 lessons</span>
+                        <span>Practice files</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Best for learners new to coding, automation, or data workflows.</li>
+                        <li>Covers variables, functions, lists, dictionaries, files, and modules.</li>
+                    </ul>
                     <a href="course-details.html">View details</a>
                 </article>
                 <article class="course-card">
                     <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900" alt="UI design sketches and wireframes">
                     <span class="course-tag">Design</span>
                     <h3>UI Design Essentials</h3>
-                    <p>Create clean layouts and thoughtful user experiences.</p>
+                    <p>Create clean layouts and thoughtful user experiences with visual hierarchy, responsive grids, accessible color, and Figma workflows.</p>
+                    <div class="course-info" aria-label="UI Design Essentials details">
+                        <span>5 weeks</span>
+                        <span>24 lessons</span>
+                        <span>Figma</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Best for aspiring product designers, frontend learners, and founders.</li>
+                        <li>Includes wireframes, UI kits, usability review, and a case-study screen.</li>
+                    </ul>
+                    <a href="course-details.html">View details</a>
+                </article>
+                <article class="course-card">
+                    <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Team reviewing analytics dashboard">
+                    <span class="course-tag">Analytics</span>
+                    <h3>Data Analytics Starter</h3>
+                    <p>Learn spreadsheets, data cleaning, charts, dashboard thinking, and business insight storytelling for entry-level analyst work.</p>
+                    <div class="course-info" aria-label="Data Analytics Starter details">
+                        <span>7 weeks</span>
+                        <span>32 lessons</span>
+                        <span>Projects</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Best for learners moving into reporting, operations, or analytics roles.</li>
+                        <li>Covers CSV cleanup, formulas, pivot tables, visual summaries, and KPIs.</li>
+                    </ul>
+                    <a href="course-details.html">View details</a>
+                </article>
+                <article class="course-card">
+                    <img src="https://images.pexels.com/photos/1181359/pexels-photo-1181359.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Backend development code on monitors">
+                    <span class="course-tag">Backend</span>
+                    <h3>Backend API Basics</h3>
+                    <p>Understand servers, routes, databases, authentication concepts, and API testing through a simple service project.</p>
+                    <div class="course-info" aria-label="Backend API Basics details">
+                        <span>8 weeks</span>
+                        <span>34 lessons</span>
+                        <span>Intermediate</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Best for frontend learners ready to understand full-stack workflows.</li>
+                        <li>Includes REST APIs, request handling, database models, and Postman tests.</li>
+                    </ul>
+                    <a href="course-details.html">View details</a>
+                </article>
+                <article class="course-card">
+                    <img src="https://images.pexels.com/photos/6476589/pexels-photo-6476589.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Digital marketing planning desk">
+                    <span class="course-tag">Marketing</span>
+                    <h3>Digital Marketing Launchpad</h3>
+                    <p>Plan campaigns, write conversion-focused content, track metrics, and build a practical launch strategy for online brands.</p>
+                    <div class="course-info" aria-label="Digital Marketing Launchpad details">
+                        <span>4 weeks</span>
+                        <span>20 lessons</span>
+                        <span>Templates</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Best for creators, small business owners, and early marketing learners.</li>
+                        <li>Covers audience research, landing pages, email basics, and campaign KPIs.</li>
+                    </ul>
                     <a href="course-details.html">View details</a>
                 </article>
             </div>

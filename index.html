@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
             <a class="brand" href="index.html" aria-label="LearnSphere home">
@@ -35,7 +36,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero">
             <div class="hero-content">
                 <p class="eyebrow">Online learning made practical</p>
@@ -58,21 +59,48 @@
                     <img src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Web development code on a laptop">
                     <span class="course-tag">Web Development</span>
                     <h3>Frontend Foundations</h3>
-                    <p>HTML, CSS, JavaScript, responsive design, and project-based UI practice.</p>
+                    <p>Build responsive websites with semantic HTML, modern CSS, JavaScript interactions, accessibility basics, and a portfolio-ready final project.</p>
+                    <div class="course-info" aria-label="Frontend Foundations details">
+                        <span>8 weeks</span>
+                        <span>36 lessons</span>
+                        <span>Beginner</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Responsive layouts and reusable UI components</li>
+                        <li>Live mentor review on weekly practice tasks</li>
+                    </ul>
                     <a href="course-details.html">View course</a>
                 </article>
                 <article class="course-card">
                     <img src="https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=900" alt="Python programming on a laptop">
                     <span class="course-tag">Data Skills</span>
                     <h3>Python for Beginners</h3>
-                    <p>Start programming with Python through clean examples and simple exercises.</p>
+                    <p>Start programming with Python through clean examples, logic practice, file handling, data basics, and small automation projects.</p>
+                    <div class="course-info" aria-label="Python for Beginners details">
+                        <span>6 weeks</span>
+                        <span>30 lessons</span>
+                        <span>Beginner</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Variables, loops, functions, and problem solving</li>
+                        <li>Mini projects for automation and data cleanup</li>
+                    </ul>
                     <a href="course-details.html">View course</a>
                 </article>
                 <article class="course-card">
                     <img src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=900" alt="UI design sketches and wireframes">
                     <span class="course-tag">Design</span>
                     <h3>UI Design Essentials</h3>
-                    <p>Learn layout, color, typography, and usability for modern digital products.</p>
+                    <p>Learn layout, color, typography, usability, wireframing, design systems, and presentation habits for modern digital products.</p>
+                    <div class="course-info" aria-label="UI Design Essentials details">
+                        <span>5 weeks</span>
+                        <span>24 lessons</span>
+                        <span>Beginner</span>
+                    </div>
+                    <ul class="course-highlights">
+                        <li>Figma-based wireframes and high-fidelity screens</li>
+                        <li>Accessibility, hierarchy, and usability review</li>
+                    </ul>
                     <a href="course-details.html">View course</a>
                 </article>
             </div>
@@ -84,7 +112,7 @@
                 <h2>Preview a lesson</h2>
             </div>
             <div class="video-panel">
-                <div class="video-placeholder" aria-label="Course video preview">
+                <div class="video-placeholder" role="button" tabindex="0" aria-label="Open course video preview">
                     <div class="play-button" aria-hidden="true"></div>
                 </div>
                 <div>

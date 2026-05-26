@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
         <nav class="navbar" aria-label="Main navigation">
             <a class="brand" href="index.html" aria-label="LearnSphere home">
@@ -27,7 +28,7 @@
                 </button>
             </div>
             <ul class="nav-links">
-                <li><a href="courses.html">Course Listings</a></li>
+                <li><a href="courses.html" aria-current="page">Course Listings</a></li>
                 <li><a href="index.html#videos">Video Section</a></li>
                 <li><a href="index.html#instructors">Instructor Profiles</a></li>
                 <li><a class="nav-button" href="login.html">Login / Register</a></li>
@@ -35,18 +36,19 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="course-detail-hero">
             <div class="course-detail-content">
                 <div>
                     <a class="back-link" href="courses.html">Back to courses</a>
                     <p class="eyebrow">Web Development</p>
                     <h1>Frontend Foundations</h1>
-                    <p class="course-lead">Build polished, responsive websites with HTML, CSS, JavaScript, accessibility basics, and real project practice.</p>
+                    <p class="course-lead">Build polished, responsive websites with HTML, CSS, JavaScript, accessibility basics, reusable UI patterns, and real project practice.</p>
                     <div class="course-meta" aria-label="Course facts">
                         <span>Beginner friendly</span>
                         <span>8 weeks</span>
                         <span>36 lessons</span>
+                        <span>6 hands-on projects</span>
                         <span>Certificate included</span>
                     </div>
                     <div class="hero-actions">
@@ -64,6 +66,7 @@
                         <li>Live mentor support every week</li>
                         <li>Downloadable practice files</li>
                         <li>Portfolio-ready final project</li>
+                        <li>Code review checklist and project rubric</li>
                         <li>Lifetime access to recordings</li>
                     </ul>
                 </aside>
@@ -78,19 +81,19 @@
                     <div class="outcome-grid">
                         <div>
                             <h3>Responsive Layouts</h3>
-                            <p>Create flexible pages with grids, cards, forms, and mobile-first structure.</p>
+                            <p>Create flexible pages with grids, cards, forms, navigation bars, and mobile-first structure.</p>
                         </div>
                         <div>
                             <h3>Clean CSS Systems</h3>
-                            <p>Use reusable spacing, color, typography, and component patterns confidently.</p>
+                            <p>Use reusable spacing, color, typography, component patterns, and theme variables confidently.</p>
                         </div>
                         <div>
                             <h3>JavaScript Basics</h3>
-                            <p>Add menus, theme toggles, validation touches, and lightweight interactions.</p>
+                            <p>Add menus, theme toggles, modal previews, validation touches, and lightweight interactions.</p>
                         </div>
                         <div>
                             <h3>Project Delivery</h3>
-                            <p>Plan, build, test, and present a complete landing page and course site.</p>
+                            <p>Plan, build, test, polish, and present a complete landing page and course site.</p>
                         </div>
                     </div>
                 </article>
@@ -100,6 +103,49 @@
                     <p class="eyebrow">Instructor</p>
                     <h2>Aarav Mehta</h2>
                     <p>Full-stack developer and mentor focused on clear explanations, useful projects, and job-ready frontend habits.</p>
+                    <div class="mentor-stats" aria-label="Instructor highlights">
+                        <span>9+ years building web apps</span>
+                        <span>1,800+ learners mentored</span>
+                        <span>Weekly project feedback</span>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="course-detail-section">
+            <div class="detail-grid">
+                <article class="detail-panel">
+                    <p class="eyebrow">Course Overview</p>
+                    <h2>What this course includes</h2>
+                    <div class="detail-columns">
+                        <div>
+                            <h3>Who it is for</h3>
+                            <p>Students, career switchers, designers, and beginner developers who want to create clean websites without relying only on templates.</p>
+                        </div>
+                        <div>
+                            <h3>Prerequisites</h3>
+                            <p>No prior coding experience is required. Basic computer skills and comfort using a browser are enough to begin.</p>
+                        </div>
+                        <div>
+                            <h3>Tools used</h3>
+                            <p>VS Code, browser developer tools, Git basics, responsive testing tools, and lightweight design references.</p>
+                        </div>
+                        <div>
+                            <h3>Final outcome</h3>
+                            <p>You will complete a responsive learning platform interface with course cards, forms, navigation, dark mode, and interactive JavaScript.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <aside class="detail-panel compact-panel">
+                    <p class="eyebrow">Learning Format</p>
+                    <h2>How you will learn</h2>
+                    <ul class="detail-list">
+                        <li>Short lessons with focused practice tasks</li>
+                        <li>Weekly mentor checkpoints and code review notes</li>
+                        <li>Downloadable starter files and project briefs</li>
+                        <li>Final polish checklist before certificate submission</li>
+                    </ul>
                 </aside>
             </div>
         </section>
@@ -114,28 +160,42 @@
                     <span>01</span>
                     <div>
                         <h3>HTML structure and semantic pages</h3>
-                        <p>Headings, sections, links, images, forms, and accessible document structure.</p>
+                        <p>Headings, sections, links, images, forms, tables, metadata, and accessible document structure.</p>
                     </div>
                 </article>
                 <article>
                     <span>02</span>
                     <div>
                         <h3>CSS layout and visual design</h3>
-                        <p>Box model, flexbox, grid, responsive spacing, colors, and reusable card systems.</p>
+                        <p>Box model, flexbox, grid, responsive spacing, colors, typography, and reusable card systems.</p>
                     </div>
                 </article>
                 <article>
                     <span>03</span>
                     <div>
                         <h3>JavaScript for interface behavior</h3>
-                        <p>DOM selection, events, menus, toggles, and simple page state.</p>
+                        <p>DOM selection, events, menus, theme toggles, modal windows, validation, and simple page state.</p>
                     </div>
                 </article>
                 <article>
                     <span>04</span>
                     <div>
+                        <h3>Accessibility and responsive testing</h3>
+                        <p>Keyboard navigation, focus states, readable contrast, alt text, mobile checks, and reduced-motion support.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>05</span>
+                    <div>
+                        <h3>Deployment preparation</h3>
+                        <p>Folder structure, asset checks, link checks, browser testing, and final styling polish for launch.</p>
+                    </div>
+                </article>
+                <article>
+                    <span>06</span>
+                    <div>
                         <h3>Final portfolio project</h3>
-                        <p>Build and polish a responsive learning platform page with review feedback.</p>
+                        <p>Build and polish a responsive learning platform page with review feedback and a presentation walkthrough.</p>
                     </div>
                 </article>
             </div>
